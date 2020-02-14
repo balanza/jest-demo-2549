@@ -3,6 +3,6 @@ module.exports = {
     roots: [ "<rootDir>/src" ],
     testEnvironment: "./src/test/SingleContextNodeEnvironment",
     testMatch: [
-        "<rootDir>/**/src/test/**/*.test.js"
+        "<rootDir>/src/test/**/*.test.js"
     ]
 };
