@@ -5,7 +5,7 @@
 ### Default
 
 By default Jest uses sandbox isolation to prevent tests influencing other tests by changing the global environment.
-In theory that's a nice thing to have but in reality it is annyoing as hell because it breaks important JavaScript
+In theory that's a nice thing to have but in reality it is annoying as hell because it breaks important JavaScript
 internals like instanceof checks. So all tests in this project fail because of this.
 
 To reproduce this scenario disable `testEnvironment` in `jest.config.js` and run `npm install` and `npm test`. Doesn't matter if you use Jest 24 or 25.
