@@ -52,4 +52,8 @@ describe("instanceof", () => {
         expect(new Uint8Array([]) instanceof nodeTypedArrayType).toBe(true);
         expect(new Uint8Array([]) instanceof nodeObjectType).toBe(true);
     });
+    
+    it("has access to shared global variables", () => {
+        expect(foo).toBe('my foo value');
+    });
 });

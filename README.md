@@ -1,4 +1,8 @@
 # Jest demo to demonstrate issue https://github.com/facebook/jest/issues/2549
+This is an integration on [this example](https://github.com/kayahr/jest-demo-2549) that aims two things:
+1. to fix the broken workaround (see below)
+2. to provide shared, global variables in global setup
+
 
 ## Scenarios
 
@@ -21,10 +25,11 @@ JavaSCript works again as expected and all tests in this project succeed.
 To reproduce this scenario enable `testEnvironment` in `jest.config.js`, downgrade jest to 24.9.0 in `package.json` (Does not work with Jest 25!)
 and run `npm install` and `npm test`.
 
-### Broken workaround
+### ~~Broken workaround~~
 
-Unfortunately the workaround is no longer working with Jest 25. When running the tests then Jest fails with the
-error message `describe is not defined`.
+~~Unfortunately the workaround is no longer working with Jest 25. When running the tests then Jest fails with the error message `describe is not defined`.~~
 
-To reproduce this scenaro enable `testEnvironment` in `jest.config.js`, upgrade jest to 25.1.0 in `package.json`
-and run `npm install` and `npm test`
+~~To reproduce this scenaro enable `testEnvironment` in `jest.config.js`, upgrade jest to 25.1.0 in `package.json` and run `npm install` and `npm test`~~
+
+As brilliantly pointed out in [this comment](https://github.com/facebook/jest/issues/2549#issuecomment-586164656), to use `jest-environment-node@24` is enough to restore previous environment behaviour. This repository demonstrates this (check `package.json`). To use this workaround, you just need to `npm i jest-environment-node@24 --save-dev`.
+
