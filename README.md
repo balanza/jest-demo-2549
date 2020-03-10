@@ -33,3 +33,6 @@ and run `npm install` and `npm test`.
 
 As brilliantly pointed out in [this comment](https://github.com/facebook/jest/issues/2549#issuecomment-586164656), to use `jest-environment-node@24` is enough to restore previous environment behaviour. This repository demonstrates this (check `package.json`). To use this workaround, you just need to `npm i jest-environment-node@24 --save-dev`.
 
+### Typescript
+
+There is also a typescript version of the example. Please have look at [`ts`](https://github.com/balanza/jest-demo-2549/tree/ts) branch.

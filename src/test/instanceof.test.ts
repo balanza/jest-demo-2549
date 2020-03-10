@@ -2,7 +2,9 @@ const fs = require("fs");
 const util = require("util");
 const readFile = util.promisify(fs.readFile);
 
-function getSuperClass(cls) {
+declare var foo: string;
+
+function getSuperClass(cls: Function) {
     const prototype = Object.getPrototypeOf(cls.prototype);
     return prototype ? prototype.constructor : null;
 }
